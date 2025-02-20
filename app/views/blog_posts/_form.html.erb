@@ -1,0 +1,21 @@
+<%= form_with model: blog_post do |form| %>
+  <% if form.object.errors.any? %>
+    <div>
+      <% form.object.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
