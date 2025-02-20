@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+      <%= link_to "New Blog Post", new_blog_post_path %><br>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete %><br>
+    <% end %>
+    <%= link_to "Home", root_path %>
     <%= yield %>
   </body>
 </html>
