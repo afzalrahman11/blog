@@ -1,7 +1,11 @@
-<h1>Blog Post</h1>
-<p>This is the Blog Post Webpage where you can find out the blogs in various topics.</p>
+<h1 class="text-4xl font-bold mb-4">Blog Post</h1>
+<p class="text-lg mb-8">This is the Blog Post Webpage where you can find out the blogs in various topics.</p>
 
 <% @blog_posts.each do |blog_post| %>
-  <h3><%= link_to blog_post.title, blog_post %></h3>
-  <p><%= blog_post.body %></p>
+  <div class="mb-6">
+    <h3 class="text-2xl font-semibold text-blue-600 hover:underline">
+      <%= link_to blog_post.title, blog_post %>
+    </h3>
+    <p class="text-base text-gray-700"><%= blog_post.body %></p>
+  </div>
 <% end %>
