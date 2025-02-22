@@ -1,6 +1,6 @@
-<h2 class="text-2xl font-semibold hover:underline"><%= @blog_post.title %></h2>
+<h2 class="text-2xl font-semibold mt-10"><%= @blog_post.title %></h2>
 <p class="text-base text-gray-700"><%= @blog_post.body %></p>
 
-<div class = "font-semibold text-blue-600 hover:underline">
+<div class = "font-semibold text-blue-600 hover:underline mt-4">
   <%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in?%><br>
 </div>

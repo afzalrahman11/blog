@@ -1,21 +1,21 @@
-<%= form_with model: blog_post do |form| %>
+<%= form_with model: blog_post, class: 'space-y-4' do |form| %>
   <% if form.object.errors.any? %>
-    <div>
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
       <% form.object.errors.full_messages.each do |error| %>
         <li><%= error %></li>
       <% end %>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+  <div class="flex flex-col">
+    <%= form.label :title, class: 'font-semibold text-xl' %>
+    <%= form.text_field :title, class: 'border rounded-md p-2' %>
   </div>
 
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
+  <div class="flex flex-col">
+    <%= form.label :body, class: 'font-semibold text-xl' %>
+    <%= form.text_area :body, class: 'border rounded-md p-2' %>
   </div>
 
-  <%= form.submit %>
+  <%= form.submit class: 'bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600 mb-4' %>
 <% end %>

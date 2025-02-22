@@ -11,13 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="w-96 mx-auto my-20">
+  <body class="w-1/2 mx-auto my-20">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <% if user_signed_in? %>
-      <%= link_to "New Blog Post", new_blog_post_path, class: "font-semibold text-blue-600 hover:underline" %><br>
-      <%= button_to "Logout", destroy_user_session_path, method: :delete %><br>
+      <%= link_to "New Blog Post", new_blog_post_path, class: "font-semibold text-green-600 hover:underline" %><br>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "font-semibold text-blue-600 hover:underline" %>
     <% end %>
     <%= link_to "Home", root_path, class: "font-semibold text-blue-600 hover:underline" %>
     <%= yield %>
