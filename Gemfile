@@ -70,3 +70,5 @@ gem "devise", "~> 4.9"
 # If you're not ready to upgrade yet!
 gem "tailwindcss-rails", "~> 3.3"
 gem "tailwindcss-ruby", "~> 3.4"
+
+gem "aws-sdk-s3", require: false
