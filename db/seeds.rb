@@ -12,3 +12,13 @@ user.update!(
   password: "password",
   password_confirmation: "password"
 )
+
+if BlogPost.count < 30
+  50.times do |i|
+    blog_posts = BlogPost.where(title: "Blog Post #{i}").first_or_initialize
+    blog_posts.update!(
+      content: "This is the content for Blog Post #{i}",
+      published_at: i % 7 != 0 ? Time.current : nil
+    )
+  end
+end

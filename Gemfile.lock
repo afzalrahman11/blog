@@ -181,6 +181,7 @@ GEM
     nokogiri (1.18.3-x86_64-linux-gnu)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (9.3.3)
     pg (1.5.9)
     pp (0.6.2)
       prettyprint
@@ -299,6 +300,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  pagy (~> 9.3)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
